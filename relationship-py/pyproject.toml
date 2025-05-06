@@ -1,0 +1,34 @@
+[project]
+name = "python3-relationship"
+version = "0.1.1"
+description = "Chinese Kinship Calculator - Used for calculating family titles, kinship addresses, and generational relationships."
+authors = [{ name = "young2j", email = "173371929@qq.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICEN[CS]E"]
+keywords = ["relationship", "kinship", "calculator"]
+classifiers = [
+    "Programming Language :: Python",
+     "Natural Language :: Chinese (Simplified)"
+    ]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/young2j/relationship/relationship-py"
+Documentation = "https://github.com/young2j/relationship/relationship-py/README.md"
+Repository = "https://github.com/young2j/relationship.git"
+
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["relationship"]
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple/"
+publish-url = "https://upload.pypi.org/legacy/"
+explicit = true
