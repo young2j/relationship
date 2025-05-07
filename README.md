@@ -25,6 +25,6 @@
 * javascript: [README.md](./relationship-js/README.md)
 * golang: [README.md](./relationship-go/README.md)
 
-Made with ❤️ by `<a href="https://github.com/young2j" target="_blank">`young2j `</a>`
+<br/>
 
-&#xa0;
+Made with ❤️ by <a href="https://github.com/young2j" target="_blank">`young2j`</a>
