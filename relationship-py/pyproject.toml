@@ -1,6 +1,6 @@
 [project]
 name = "python3-relationship"
-version = "0.1.1"
+version = "0.1.2"
 description = "Chinese Kinship Calculator - Used for calculating family titles, kinship addresses, and generational relationships."
 authors = [{ name = "young2j", email = "173371929@qq.com" }]
 readme = "README.md"
@@ -15,8 +15,8 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/young2j/relationship/relationship-py"
-Documentation = "https://github.com/young2j/relationship/relationship-py/README.md"
+Homepage = "https://github.com/young2j/relationship/tree/main/relationship-py"
+Documentation = "https://github.com/young2j/relationship/tree/main/relationship-py/README.md"
 Repository = "https://github.com/young2j/relationship.git"
 
 

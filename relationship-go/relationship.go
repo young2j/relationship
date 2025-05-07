@@ -74,12 +74,24 @@ func (r *Relationship) Relationship(parameter any) (result []string) {
 
 	switch p := parameter.(type) {
 	case options.ParameterOptions:
+		if p.Mode == options.OptionModeNone {
+			p.Mode = r.mode
+		}
 		opts = &p
+
 	case *options.ParameterOptions:
+		if p.Mode == options.OptionModeNone {
+			p.Mode = r.mode
+		}
 		opts = p
+
 	case string:
-		opts = optionsbuild.FromString(p)
+		opts = optionsbuild.FromString(p).SetMode(r.mode)
+
 	case map[string]any:
+		if p["mode"] == nil || p["mode"] == "" {
+			p["mode"] = r.mode
+		}
 		opts = optionsbuild.FromMapping(p)
 	}
 

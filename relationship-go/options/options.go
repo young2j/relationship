@@ -7,6 +7,7 @@ package options
 type OptionMode string
 
 const (
+	OptionModeNone       OptionMode = ""
 	OptionModeDefault   OptionMode = "default"
 	OptionModeGuangDong OptionMode = "guang_dong"
 	OptionModeNorth     OptionMode = "north"

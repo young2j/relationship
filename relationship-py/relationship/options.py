@@ -7,6 +7,7 @@ from dataclasses import dataclass
 
 
 class OptionMode(StrEnum):
+    NONE = ""
     DEFAULT = "default"
     GUANG_DONG = "guang_dong"
     NORTH = "north"
@@ -44,11 +45,11 @@ class ParameterOptions(object):
         return cls(**mapping)
 
     @classmethod
-    def from_string(cls, text: str):
+    def from_string(cls, text: str, **kwargs):
         from relationship.rule import expression as _expression
 
         for item in _expression:
             match = item["exp"].match(text)
             if match:
                 return item["opt"](match)
-        return cls.default(text=text)
+        return cls.default(text=text, **kwargs)

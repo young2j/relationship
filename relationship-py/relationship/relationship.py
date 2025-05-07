@@ -26,10 +26,18 @@ class Relationship(object):
     def relationship(self, parameter: str | dict | ParameterOptions):
         opts = ParameterOptions.default()
         if isinstance(parameter, ParameterOptions):
+            if parameter.mode == OptionMode.NONE:
+                parameter.mode = self.mode
             opts = parameter
+
         elif isinstance(parameter, str):
-            opts = ParameterOptions.from_string(parameter)
+            opts = ParameterOptions.from_string(
+                parameter, mode=self.mode or OptionMode.DEFAULT
+            )
+
         elif isinstance(parameter, dict):
+            if not parameter.get("mode"):
+                parameter["mode"] = self.mode
             opts = ParameterOptions.from_mapping(parameter)
 
         if opts.mode != self.mode:
