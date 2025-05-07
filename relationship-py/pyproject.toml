@@ -1,6 +1,6 @@
 [project]
 name = "python3-relationship"
-version = "0.1.2"
+version = "0.1.3"
 description = "Chinese Kinship Calculator - Used for calculating family titles, kinship addresses, and generational relationships."
 authors = [{ name = "young2j", email = "173371929@qq.com" }]
 readme = "README.md"
